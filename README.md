@@ -1,6 +1,14 @@
 # Maximizing Transportation Resources for Queens College Students
 
+## Links to Project Assets
+- **Interactive Map**: [Heatmap](https://mellifluous-bublanina-686c73.netlify.app/) 
+- **Website**: [Project Website](https://68d47e1185a19a2c76a47695--warm-pithivier-d62983.netlify.app/)
+- **Slides PDF**: [Datavengers](Datavengers-1(1).pdf)
+- **Video**: [Project Video](https://your-video-link.com)
+- **Jupyter Notebook**: [Data](https://Google.com)
+  
 ## Project Overview
+
 This datathon project analyzes bus lane violations on the Q44+ route near Queens College to quantify their impact on First-Generation Low-Income (FGLI) students, who comprise approximately 80% of the student body. Using MTA's Automated Camera Enforcement (ACE) data, we identify repeat exempt vehicle offenders, calculate student delays, and propose AI cameras to reduce these delays. Our analysis reveals chronic violations (e.g., mobile bus stop as the highest type) causing 279 hours of delays and 12,552.8 student-hours lost, with an upward trend in 2023-2025 and stop counts as the key predictor for repeats.
 
 The project demonstrates how data science can address transportation inequities for CUNY students, with actionable recommendations for the MTA to implement AI cameras.
@@ -22,7 +30,6 @@ Queens College students, predominantly FGLI, rely on the Q44 bus for daily commu
 - **Primary Dataset**: MTA Bus Automated Camera Enforcement Violations (filtered for Q44+, exempt statuses, and within 5 km of Queens College: lat 40.736, long -73.817).
   - Total rows analyzed: 34,305 exempt violations.
   - Key columns: `Violation ID`, `Vehicle ID`, `First Occurrence`, `Violation Status`, `Violation Type`, `Bus Route ID`, `Violation Latitude`, `Violation Longitude`.
-- **Optional Datasets**: MTA Bus Segment Speeds (for delay correlation, if integrated).
 - **Tools**: R with libraries like "tidyverse", "lubridate", "data.table", "leaflet.extras", "Leaflet", "ggplot2", "plotly", "htmlwidgets", "data.table" for processing, visualization, and modeling.
 
 ### Methodology
@@ -95,11 +102,6 @@ Queens College students, predominantly FGLI, rely on the Q44 bus for daily commu
 - **Expand ACE to Q17/Q25**: Extend Automated Camera Enforcement to Q17/Q25 routes (missing in data but key for QC students).
 - **Pilot Program**: Test on Q44+ for 6 months, monitoring delay reduction and violation trends (e.g., quarterly averages).
 
-## Links to Project Assets
-- **Interactive Map**: [heatmap.html](https://mellifluous-bublanina-686c73.netlify.app/) 
-- **Website**: [Project Website](https://68d47e1185a19a2c76a47695--warm-pithivier-d62983.netlify.app/)
-- **Slides PDF**: [Datavengers-1.pdf](Datavengers-1(1).pdf)
-- **Video**: [Project Video](https://your-video-link.com) 
 ## How to Run the Code
 1. Install required libraries:
    ```r
