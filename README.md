@@ -12,7 +12,7 @@ The project demonstrates how data science can address transportation inequities 
 - Joseph Chiastla
 
 ### Research Question
-How do repeat exempt vehicle violations on the Q44+ bus route near Queens College during peak commuting hours (7-9 AM and 4-6 PM) contribute to student delays, and what is the potential reduction in delays from installing AI cameras at identified hotspots?
+How do repeat exempt vehicle violations on the Q44+ bus route near Queens College during peak commuting hours contribute to student delays, and what is the potential reduction in delays from installing AI cameras at identified hotspots?
 
 ## Background
 Queens College students, predominantly FGLI, rely on the Q44 bus for daily commutes to campus and jobs. The route passes near high schools, hospitals, and stores, leading to delays during rush hours. Ridership peaks in early September with the return to school. Late buses aren't just a minor inconvenience—they result in missed classes, lost opportunities, and harder paths to break poverty cycles for low-income students. Our project uses MTA ACE data to quantify these delays and propose solutions.
@@ -23,13 +23,13 @@ Queens College students, predominantly FGLI, rely on the Q44 bus for daily commu
   - Total rows analyzed: 34,305 exempt violations.
   - Key columns: `Violation ID`, `Vehicle ID`, `First Occurrence`, `Violation Status`, `Violation Type`, `Bus Route ID`, `Violation Latitude`, `Violation Longitude`.
 - **Optional Datasets**: MTA Bus Segment Speeds (for delay correlation, if integrated).
-- **Tools**: R with libraries like `tidyverse`, `lubridate`, `data.table`, `leaflet.extras`, `nnet`, `DT`, `ggplot2`, `plotly`, `randomForest`, `dbscan`, `caret` for processing, visualization, and modeling.
+- **Tools**: R with libraries like "tidyverse", "lubridate", "data.table", "leaflet.extras", "Leaflet", "ggplot2", "plotly", "htmlwidgets", "data.table" for processing, visualization, and modeling.
 
 ### Methodology
 1. **Identify ACE Routes Impacting FGLI Students**: Filtered for Q44+ (most common for QC students), exempt vehicles (e.g., "EXEMPT - BUS/PARATRANSIT"), and 5 km radius.
 2. **Top 250 Repeat Offenders**: Grouped by `Vehicle ID`, counted violations, filtered >1, sorted descending, took top 250.
 3. **Calculate Delays**: Assumed 1.5 min per violation, 45 students per bus; total delay = 279 hours, student-hours lost = 12,552.8.
-4. **Predict Repeat Offenses**: Used regression to find stop counts as key predictor (accuracy ~78%).
+4. **Predict Repeat Offenses**: Used regression to find stop counts as key predictor.
 5. **Visualizations**: Heatmap, bar charts, histograms, time series, density plots, feature importance.
 
 ### Key Code Snippets
@@ -72,37 +72,28 @@ Queens College students, predominantly FGLI, rely on the Q44 bus for daily commu
 - **Regression**:
   ```r
   repeat_model3 <- lm(violation_count ~ avg_distance + violation_types + activity_duration + stop_count, data = train)
-summary(repeat_model3)
+  summary(repeat_model3)
   ```
 
 ## Key Findings
 1. **Highest Violation Type**: Mobile bus stop violations dominate near Queens College (e.g., 60% of 34,305 violations).
-   - ![Violation Types Bar](violation_types_bar.png)
+
 
 2. **Top 250 Repeat Offenders**: Counts range from 552 to 19, with the top 50 causing 80% of violations.
-   - ![Cumulative Violations](cumulative_violations.png)
 
-3. **Stop Counts as Key Predictor**: Random forest shows stop counts as the most important factor for repeats (accuracy 78%).
-   - ![Factor Importance](rf_importance.png)
+
+3. **Stop Counts as Key Predictor**: Regression shows stop counts as the most important factor for repeats.
+
 
 4. **Upward Trend in Violations**: Violations increased over 2023-2025, peaking on weekdays and in 2025 Q1.
-   - ![Violations Quarterly](violations_quarterly.png)
-   - ![Violations Day-of-Week](violations_dow.png)
 
-5. **Spatial Trends**: Repeats cluster 0.5-1.5 km from campus; average distance dropped from 1.5 km to 1.0 km.
-   - ![Distance Density](distance_density.png)
-   - ![Average Distance Over Time](avg_distance_plot.png)
-   - ![Clustered Hotspots](clusters_plot.png)
-
-6. **Delays and Impact**: 279 hours of delays, 12,552.8 student-hours lost, economic impact ~$251,056 (assuming $20/hour productivity).
-   - ![Congestion Pricing Bar](congestion_bar.png) (Post-pricing drop of 15%).
+5. **Delays and Impact**: 279 hours of delays, 12,552.8 student-hours lost, economic impact ~$251,056 (assuming $20/hour productivity).
 
 ## Recommendations
-- **Install AI Cameras**: Deploy 3 AI cameras at Main St hotspots (e.g., near Kissena Blvd) to capture license plates and issue $50 fines for stops >3 min. Cost: $5K/camera. Estimated ROI: Reduce delays by 20% (based on MTA ACE gains), saving $50,212/year in student productivity.
+- **Install AI Cameras**: Deploy 3 AI cameras at Main St hotspots (e.g., near Kissena Blvd) to capture license plates and issue $50 fines for stops >3 min. 
 - **Target Mobile Bus Stops**: Prioritize enforcement for “mobile bus stop” violations (highest type), using stop counts as a predictor for repeats.
 - **Expand ACE to Q17/Q25**: Extend Automated Camera Enforcement to Q17/Q25 routes (missing in data but key for QC students).
 - **Pilot Program**: Test on Q44+ for 6 months, monitoring delay reduction and violation trends (e.g., quarterly averages).
-- **Economic Justification**: Delays cost $251,056 annually—cameras could save $50,212/year by addressing the 2025 upward trend.
 
 ## Links to Project Assets
 - **Interactive Map**: [heatmap.html](https://mellifluous-bublanina-686c73.netlify.app/) 
@@ -121,7 +112,7 @@ summary(repeat_model3)
 ## Credits
 - **Team**: Atiqa Ullah, Winnie Chen, Prionty Ava, Joseph Chiastla
 - **Data Sources**: MTA Automated Camera Enforcement Violations, NYC Open Data, Poll on CUNY students (made public)
-- **Tools**: R, Google Slides, Netlify
+- **Tools**: R, Google Slides, Netlify, Capcut, YouTube
 - **Template**: Slidesgo for presentation template
 
 Thank you for checking out our project! Contributions welcome—fork and PR.
