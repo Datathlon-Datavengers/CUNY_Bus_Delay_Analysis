@@ -3,7 +3,7 @@
 ## Links to Project Assets
 - **Interactive Map**: [Heatmap](https://mellifluous-bublanina-686c73.netlify.app/) 
 - **Website**: [Project Website](https://68d47e1185a19a2c76a47695--warm-pithivier-d62983.netlify.app/)
-- **Slides PDF**: [Datavengers](Datavengers-1(1).pdf)
+- **Slides PDF**: [Datavengers](https://github.com/Datathlon-Datavengers/CUNY_Bus_Delay_Analysis/blob/main/Datavengers-1%20Slides.pdf)
 - **Video**: [Project Video](https://your-video-link.com)
 - **Jupyter Notebook**: [Data](https://Google.com)
   
