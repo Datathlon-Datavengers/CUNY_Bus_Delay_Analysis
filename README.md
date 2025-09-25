@@ -6,7 +6,9 @@
 - **Slides PDF**: [Datavengers](https://github.com/Datathlon-Datavengers/CUNY_Bus_Delay_Analysis/blob/main/Datavengers-1%20Slides.pdf)
 - **Video**: [Project Video](https://www.youtube.com/watch?v=gjbFQrkwwvY)
 - **Jupyter Notebook**: [Data](https://euphonious-sable-d2b0c1.netlify.app/)
-  [![Video]("https://www.youtube.com/watch?v=gjbFQrkwwvY")]
+
+ [<video src="https://youtu.be/gjbFQrkwwvY?feature=shared" width="320" height="240" controls></video>
+
 ## Project Overview
 
 This datathon project analyzes bus lane violations on the Q44+ route near Queens College to quantify their impact on First-Generation Low-Income (FGLI) students, who comprise approximately 80% of the student body. Using MTA's Automated Camera Enforcement (ACE) data, we identify repeat exempt vehicle offenders, calculate student delays, and propose AI cameras to reduce these delays. Our analysis reveals chronic violations (e.g., mobile bus stop as the highest type) causing 279 hours of delays and 12,552.8 student-hours lost, with an upward trend in 2023-2025 and stop counts as the key predictor for repeats.
