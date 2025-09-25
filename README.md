@@ -7,7 +7,7 @@
 - **Video**: [Project Video](https://www.youtube.com/watch?v=gjbFQrkwwvY)
 - **Jupyter Notebook**: [Data](https://euphonious-sable-d2b0c1.netlify.app/)
 
- [<video src="https://youtu.be/gjbFQrkwwvY?feature=shared" width="320" height="240" controls></video>
+ <video src="https://youtu.be/gjbFQrkwwvY?feature=shared" width="320" height="240" controls></video>
 
 ## Project Overview
 
